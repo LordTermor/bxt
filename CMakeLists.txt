@@ -3,6 +3,7 @@
 ################################################################################
 cmake_minimum_required(VERSION 3.23)
 project(bxt C CXX)
+enable_testing()
 
 list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
@@ -15,6 +16,7 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
 set(FETCHCONTENT_QUIET FALSE)
 
 option(BXT_EXPERIMENTAL_COPY_MOVE "Enable experimental copy/move operations" OFF)
+option(BXT_BUILD_TESTS "Build unit tests" OFF)
 
 ################################################################################
 # Dependencies: Fetch and configure external libraries not available in Conan

@@ -20,7 +20,9 @@
       "inherits": "base",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "BXT_BUILD_TESTS": "ON",
+        "CONAN_INSTALL_ARGS": "--build=missing;-o testing=True"
       }
     },
     {
